@@ -1,17 +1,25 @@
 //Import the MySQL connection.
-var connection = require('../config/connection');
+var connection = require('./connection');
 
-//Create
+//Create insertOne()
 
 //End Create
 
 
-//Read 
+//Read selectAll()
+var orm = {
+    all: function(tableInput, cb) {
+        connection.query('SELECT * FROM '+ tableInput + ';', function(err, result) {
+            if (err) throw err;
+            cb(result);
+        })
+    }
+}
 
 //End Read
 
 
-//Update
+//Update updateOne()
 
 //End Update
 
