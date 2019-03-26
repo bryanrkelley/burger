@@ -1,15 +1,19 @@
-var express = require("express");
+require('dotenv').config();
+
+var express = require('express');
+var methodOverride = require('method-override');
 
 var PORT = process.env.PORT || 8080;
 
 var app = express();
-
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 
 app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.json());
+
+app.use(methodOverride('_method'));
 
 //Handlebars
 var exphbs = require("express-handlebars");
