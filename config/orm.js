@@ -2,7 +2,6 @@
 var connection = require('./connection');
 
 
-
 var orm = {
     //Read All()
     all: function(tableInput, cb) {
@@ -33,11 +32,6 @@ var orm = {
     //End Create
     
 }
-
-//Delete
-
-//End Delete
-
 
 //Export the orm object for the model
 module.exports = orm;
