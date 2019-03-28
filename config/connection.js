@@ -9,8 +9,8 @@ var keys = require('../config/keys.js');
 //     password: keys.secret,
 //     database: 'burgers_db',
 //     port: 3306
-// });
 
+var connection;
 
 if (process.env.JAWSDB_URL) {
 	// DB is JawsDB on Heroku
