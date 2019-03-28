@@ -2,14 +2,6 @@
 const mysql = require('mysql');
 
 var keys = require('../config/keys.js');
-
-// const connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: keys.secret,
-//     database: 'burgers_db',
-//     port: 3306
-
 var connection;
 
 if (process.env.JAWSDB_URL) {
